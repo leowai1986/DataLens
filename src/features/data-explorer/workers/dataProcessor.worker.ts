@@ -2,7 +2,8 @@ import type { WorkerMessage, WorkerResponse, DataRow } from '@core/types';
 import { applyFilters, applySort } from '../utils/dataTransforms';
 
 self.onmessage = (e: MessageEvent<WorkerMessage>) => {
-  if (e.data.type !== 'PROCESS') return;
+  const msg = e.data as WorkerMessage;
+  if (msg.type !== 'PROCESS') return;
 
   const start = performance.now();
   const { rows, filters, sort } = e.data.payload;

@@ -67,7 +67,11 @@ export const useExplorerStore = create<ExplorerState>()(
         toggleRowSelection: (id) =>
           set((s) => {
             const next = new Set(s.selectedRows);
-            next.has(id) ? next.delete(id) : next.add(id);
+            if (next.has(id)) {
+              next.delete(id);
+            } else {
+              next.add(id);
+            }
             return { selectedRows: next };
           }),
         selectAllRows: (ids, selected) =>

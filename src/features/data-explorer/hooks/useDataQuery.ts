@@ -26,7 +26,7 @@ export const useDataQuery = (allRows: DataRow[]) => {
           worker.onmessage = (e) => {
             clearTimeout(timeout);
             worker.terminate();
-            resolve(e.data.payload.rows as DataRow[]);
+            resolve((e.data as { payload: { rows: DataRow[] } }).payload.rows);
           };
 
           worker.postMessage({

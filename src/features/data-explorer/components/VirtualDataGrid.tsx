@@ -23,7 +23,7 @@ export const VirtualDataGrid = ({ rows, schema }: Props) => {
     setSort,
   } = useExplorerStore();
 
-  const visibleColumns = schema.filter((c) => columnVisibility[c.key] !== false);
+  const visibleColumns = schema.filter((c) => columnVisibility[c.key]);
 
   const virtualizer = useVirtualizer({
     count: rows.length,
@@ -100,7 +100,6 @@ export const VirtualDataGrid = ({ rows, schema }: Props) => {
         {/* Virtual Rows */}
         {virtualItems.map((virtualRow) => {
           const row = rows[virtualRow.index];
-          if (!row) return null;
           const isSelected = selectedRows.has(row.id);
 
           return (

@@ -50,7 +50,7 @@ export const parseCSV = (content: string): { schema: ColumnSchema[]; rows: DataR
   });
 
   const columns = headers.map((header, idx) => {
-    const sampleValues = rawRows.slice(0, 100).map((row) => row[idx]).filter(Boolean);
+    const sampleValues = rawRows.slice(0, 100).map((row) => row[idx]).filter((v): v is string => !!v);
     const type = inferType(sampleValues as Primitive[]);
     return {
       key: header,

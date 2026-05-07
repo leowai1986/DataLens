@@ -19,7 +19,7 @@ export const ColumnManager = () => {
       <Modal open={open} onClose={() => setOpen(false)} title="Manage Columns">
         <div className="space-y-2 max-h-[400px] overflow-y-auto">
           {schema.map((col) => {
-            const isVisible = columnVisibility[col.key] !== false;
+            const isVisible = columnVisibility[col.key];
             return (
               <button
                 key={col.key}

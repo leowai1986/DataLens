@@ -15,7 +15,7 @@ export const aggregateForChart = (
   if (config.groupBy) {
     const grouped = groupBy(rows, (r) => String(r[config.xAxis] ?? 'Unknown'));
     return Object.entries(grouped).map(([name, groupRows]) => {
-      const subGroups = groupBy(groupRows, (r) => String(r[config.groupBy!] ?? 'Unknown'));
+      const subGroups = groupBy(groupRows, (r) => String(r[config.groupBy ?? ''] ?? 'Unknown'));
       const point: ChartDataPoint = { name, value: 0 };
       Object.entries(subGroups).forEach(([subName, subRows]) => {
         point[subName] = calculateAggregation(subRows, config.yAxis, config.aggregation);

@@ -29,8 +29,7 @@ export const SortControl = () => {
             onClick={() => handleSort(col.key)}
           >
             {col.label}
-            {isActive &&
-              (sort.direction === 'asc' ? (
+            {isActive && sort && (sort.direction === 'asc' ? (
                 <ArrowUp className="ml-1 h-3 w-3" />
               ) : (
                 <ArrowDown className="ml-1 h-3 w-3" />
