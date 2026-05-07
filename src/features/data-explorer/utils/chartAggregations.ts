@@ -1,4 +1,4 @@
-import type { DataRow, ColumnSchema, ChartConfig } from '@core/types';
+import type { DataRow, ChartConfig } from '@core/types';
 import { groupBy } from '@core/lib/fp';
 
 export interface ChartDataPoint {
