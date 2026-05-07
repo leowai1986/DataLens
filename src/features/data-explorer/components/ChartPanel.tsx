@@ -46,8 +46,8 @@ export const ChartPanel = ({ rows, schema }: Props) => {
 
   const chartData = useMemo(() => {
     if (!chartConfig) return [];
-    return aggregateForChart(rows, chartConfig, schema);
-  }, [rows, chartConfig, schema]);
+    return aggregateForChart(rows, chartConfig);
+  }, [rows, chartConfig]);
 
   const renderChart = () => {
     if (!chartConfig || chartData.length === 0) return null;
