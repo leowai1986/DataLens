@@ -18,7 +18,7 @@ describe('aggregateForChart', () => {
 
   it('sums values by category', () => {
     const config: ChartConfig = { type: 'bar', xAxis: 'category', yAxis: 'sales', aggregation: 'sum' };
-    const result = aggregateForChart(rows, config, schema);
+    const result = aggregateForChart(rows, config);
     expect(result).toHaveLength(2);
     expect(result.find((r) => r.name === 'A')?.value).toBe(300);
     expect(result.find((r) => r.name === 'B')?.value).toBe(200);
@@ -26,7 +26,7 @@ describe('aggregateForChart', () => {
 
   it('counts values', () => {
     const config: ChartConfig = { type: 'bar', xAxis: 'category', yAxis: 'sales', aggregation: 'count' };
-    const result = aggregateForChart(rows, config, schema);
+    const result = aggregateForChart(rows, config);
     expect(result.find((r) => r.name === 'A')?.value).toBe(2);
   });
 
@@ -38,7 +38,7 @@ describe('aggregateForChart', () => {
       aggregation: 'sum',
       groupBy: 'region',
     };
-    const result = aggregateForChart(rows, config, schema);
+    const result = aggregateForChart(rows, config);
     expect(result).toHaveLength(2);
     expect(result[0]).toHaveProperty('North');
     expect(result[0]).toHaveProperty('South');
