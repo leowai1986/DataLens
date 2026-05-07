@@ -12,12 +12,11 @@ export const aggregateForChart = (
   config: ChartConfig,
   schema: ColumnSchema[]
 ): ChartDataPoint[] => {
-  const xType = schema.find((c) => c.key === config.xAxis)?.type;
 
   if (config.groupBy) {
     const grouped = groupBy(rows, (r) => String(r[config.xAxis] ?? 'Unknown'));
     return Object.entries(grouped).map(([name, groupRows]) => {
-      const subGroups = groupBy(groupRows, (r) => String(r[config.groupBy] ?? 'Unknown'));
+      const subGroups = groupBy(groupRows, (r) => String(r[config.groupBy!] ?? 'Unknown'));
       const point: ChartDataPoint = { name, value: 0 };
       Object.entries(subGroups).forEach(([subName, subRows]) => {
         point[subName] = calculateAggregation(subRows, config.yAxis, config.aggregation);

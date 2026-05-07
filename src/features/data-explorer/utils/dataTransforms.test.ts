@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { applyFilters, applySort } from './dataTransforms';
-import type { DataRow, Filter, Sort } from '@core/types';
+import type { DataRow, Filter } from '@core/types';
 
 describe('applyFilters', () => {
   const rows: DataRow[] = [

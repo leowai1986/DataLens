@@ -1,7 +1,6 @@
 import { ArrowUpDown, ArrowUp, ArrowDown, X } from 'lucide-react';
 import { useExplorerStore } from '../stores/explorerStore';
 import { Button } from '@shared/ui/Button';
-import type { Sort } from '@core/types';
 
 export const SortControl = () => {
   const { schema, sort, setSort } = useExplorerStore();

@@ -23,8 +23,6 @@ export const VirtualDataGrid = ({ rows, schema }: Props) => {
     setSort,
   } = useExplorerStore();
 
-  const [resizingCol, setResizingCol] = useState<string | null>(null);
-
   const visibleColumns = schema.filter((c) => columnVisibility[c.key] !== false);
 
   const virtualizer = useVirtualizer({
@@ -38,12 +36,10 @@ export const VirtualDataGrid = ({ rows, schema }: Props) => {
   const someSelected = rows.some((r) => selectedRows.has(r.id)) && !allSelected;
 
   const handleResizeStart = useCallback((colKey: string) => {
-    setResizingCol(colKey);
     const handleMove = (e: MouseEvent) => {
       setColumnWidth(colKey, e.clientX);
     };
     const handleUp = () => {
-      setResizingCol(null);
       window.removeEventListener('mousemove', handleMove);
       window.removeEventListener('mouseup', handleUp);
     };

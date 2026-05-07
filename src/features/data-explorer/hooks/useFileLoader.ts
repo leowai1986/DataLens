@@ -11,7 +11,7 @@ interface LoadResult {
 
 export const useFileLoader = () => {
   const setDataset = useExplorerStore((s) => s.setDataset);
-  const [progress, setProgress] = useState(0);
+  const [progress] = useState(0);
 
   const mutation = useMutation({
     mutationFn: async (file: File): Promise<LoadResult> => {
