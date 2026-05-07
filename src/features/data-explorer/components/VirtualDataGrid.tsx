@@ -1,4 +1,4 @@
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useCallback } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { useExplorerStore } from '../stores/explorerStore';
 import type { DataRow, ColumnSchema } from '@core/types';

@@ -9,8 +9,7 @@ export interface ChartDataPoint {
 
 export const aggregateForChart = (
   rows: DataRow[],
-  config: ChartConfig,
-  schema: ColumnSchema[]
+  config: ChartConfig
 ): ChartDataPoint[] => {
 
   if (config.groupBy) {
