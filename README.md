@@ -57,7 +57,6 @@ src/
 │   └── utils/               # cn (clsx + tailwind-merge), formatters
 └── test/                    # Test setup & MSW server
 
-
 ---
 
 ## Getting Started
