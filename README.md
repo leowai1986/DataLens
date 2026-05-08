@@ -6,7 +6,7 @@
 
 &gt; Analytics Workbench for exploring large-scale datasets directly in the browser. Drop a CSV, filter, sort, visualize, and export — no backend required.
 
-[Live Demo](https://tuusuario.github.io/datalens) · [Report Bug](https://github.com/tuusuario/datalens/issues) · [Request Feature](https://github.com/tuusuario/datalens/issues)
+[Live Demo](https://data-lens-pearl.vercel.app/) · [Report Bug](https://github.com/leowai1986/datalens/issues) · [Request Feature](https://github.com/leowai1986/datalens/issues)
 
 ---
 
