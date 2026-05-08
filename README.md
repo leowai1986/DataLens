@@ -44,6 +44,7 @@
 ---
 
 ## Architecture
+```
 src/
 ├── core/                    # Domain types & pure utilities
 │   ├── types/
@@ -56,8 +57,7 @@ src/
 │   ├── hooks/               # useDebounce, useLocalStorage, useMediaQuery
 │   └── utils/               # cn (clsx + tailwind-merge), formatters
 └── test/                    # Test setup & MSW server
-
----
+```
 
 ## Getting Started
 
