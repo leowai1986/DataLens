@@ -62,32 +62,28 @@ src/
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 22+
 - npm 10+
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/tuusuario/datalens.git
+#### Clone the repository
+git clone https://github.com/leowai1986/datalens.git
 
-# Navigate to project
+#### Navigate to project
 cd datalens
 
-# Install dependencies
+#### Install dependencies
 npm install
 
-# Start development server
-npm run dev
+#### Start development server
+- npm run dev
+- Open http://localhost:5173 in your browser.
 
-Open http://localhost:5173 in your browser.
-
-Build for Production
-
+#### Build for Production
 npm run build
 
-Available Scripts
+#### Available Scripts
 
 | Script               | Description                         |
 | -------------------- | ----------------------------------- |
@@ -101,53 +97,61 @@ Available Scripts
 | `npm run format`     | Format with Prettier                |
 | `npm run typecheck`  | Type-check without emitting         |
 
-Testing
+#### Testing
 
-# Unit tests
+#### Unit tests
 npm run test
 
-# E2E tests (requires build first)
-npm run build
-npm run e2e
+#### E2E tests (requires build first)
+- npm run build
+- npm run e2e
 
-# With UI
+#### With UI
 npm run test:ui
 
-# Sample Data
+#### Sample Data
 Use the included ./e2e/fixtures/sample.csv or create your own:
 
+```csv
 name,age,city,salary
 Alice,30,New York,85000
 Bob,25,Los Angeles,62000
 Charlie,35,Chicago,94000
+```
 
 For stress testing, duplicate rows to reach 100k+ and verify Web Worker activation.
 
-# CI/CD
-Every push and PR triggers:
-Type checking (tsc --noEmit)
-Linting (ESLint 9 flat config)
-Unit tests (Vitest)
-E2E tests (Playwright, Chromium/Firefox/WebKit)
-Pre-commit hooks run lint-staged to ensure code quality.
+#### CI/CD
+- Every push and PR triggers:
+- Type checking (tsc --noEmit)
+- Linting (ESLint 9 flat config)
+- Unit tests (Vitest)
+- E2E tests (Playwright, Chromium/Firefox/WebKit)
+- Pre-commit hooks run lint-staged to ensure code quality.
 
-# Keyboard Shortcuts
+#### Keyboard Shortcuts
 | Shortcut   | Action           |
 | ---------- | ---------------- |
 | `Ctrl + O` | Open file dialog |
 | `Ctrl + R` | Reset dataset    |
 
-# Roadmap
-[ ] JSON file support
-[ ] Parquet ingestion via WASM
-[ ] SQL-like query interface
-[ ] Collaborative sessions (WebRTC)
-[ ] Plugin system for custom visualizations
+#### Roadmap
+- [ ] JSON file support
+- [ ] Parquet ingestion via WASM
+- [ ] SQL-like query interface
+- [ ] Collaborative sessions (WebRTC)
+- [ ] Plugin system for custom visualizations
 
-# Contributing
+#### Contributing
 Contributions are welcome. Please follow the existing code style and ensure all tests pass.
-Fork the repository
-Create your feature branch (git checkout -b feat/amazing-feature)
-Commit your changes (git commit -m 'feat: add amazing feature')
-Push to the branch (git push origin feat/amazing-feature)
-Open a Pull Request
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feat/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
+
+## Author
+
+**Leandro Wainer** — Senior .NET Developer  
+[linkedin.com/in/lwainer](https://linkedin.com/in/lwainer)
