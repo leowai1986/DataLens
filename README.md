@@ -1,6 +1,6 @@
 # DataLens
 
-[![CI](https://github.com/tuusuario/datalens/actions/workflows/ci.yml/badge.svg)](https://github.com/leowai1986/datalens/actions)
+[![CI](https://github.com/leowai1986/datalens/actions/workflows/ci.yml/badge.svg)](https://github.com/leowai1986/datalens/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
 
