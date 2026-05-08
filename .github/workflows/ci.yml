@@ -29,6 +29,7 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - run: npm ci
+      - run: npm ls @playwright/test --all
       - run: npx playwright install --with-deps
       - run: npm run build
       - run: npm run e2e
