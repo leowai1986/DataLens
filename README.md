@@ -1,9 +1,8 @@
 # DataLens
 
-[![CI](https://github.com/tuusuario/datalens/actions/workflows/ci.yml/badge.svg)](https://github.com/tuusuario/datalens/actions)
+[![CI](https://github.com/tuusuario/datalens/actions/workflows/ci.yml/badge.svg)](https://github.com/leowai1986/datalens/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 &gt; Analytics Workbench for exploring large-scale datasets directly in the browser. Drop a CSV, filter, sort, visualize, and export — no backend required.
 
